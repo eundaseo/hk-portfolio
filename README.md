@@ -1,6 +1,8 @@
-# BLUE BASKET
+# eunda works
 
-한국경제 AI 교육 포트폴리오. 하늘색, 코발트블루, 버터색을 활용한 쇼핑몰 콘셉트입니다.
+한국경제 AI 교육 포트폴리오. 파우더블루, 로즈핑크, 아이보리, 브라운을 활용한 빈티지 스크랩북 콘셉트입니다. 작품을 골라 보는 컬렉션 탐색 방식을 유지합니다.
+
+전체 페이지에는 CookieRun 웹폰트 Regular(400), Bold(700), Black(900)을 적용했습니다.
 
 ## 페이지
 
@@ -22,9 +24,9 @@ My picks는 현재 브라우저의 localStorage에 저장됩니다. 다른 브�
 
 ## 이미지
 
-dist/assets/blue-basket-hero.png는 built-in image_gen으로 생성했습니다.
+dist/assets/eunda-daydream.png는 built-in image_gen으로 생성했습니다.
 
-Prompt: Premium playful surreal 3D still life, cobalt blue glossy shopping bag with sculptural handle, butter yellow puffy star, sky-blue glass sphere, curled ivory ribbon, pale sky blue seamless studio backdrop. Premium editorial 3D art direction, subtle fine grain, wide 3:2 landscape, generous space, soft lighting and shadows. No words, logos, or watermark.
+Prompt: Vintage dreamy pastel editorial still life of floating pearlescent glass five-point stars and spheres over a powder blue/rose horizon. Nostalgic 1990s editorial mood, analog paper texture, film grain, pastel mint/ivory/peach refractions, restrained glow and silver sparkles. No typography, logos, UI, watermark, or shopping bag.
 
 ## 검증
 
