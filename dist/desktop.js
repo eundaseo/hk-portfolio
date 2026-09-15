@@ -19,6 +19,7 @@
   shortcuts.className='desktop-shortcuts'; shortcuts.setAttribute('aria-label','바탕화면 바로가기');
   shortcuts.innerHTML=`<a href="index.html"><span aria-hidden="true">🌐</span><strong>My universe</strong></a>${routes.map(([id,name])=>`<a href="${id}.html" ${page===id?'aria-current="page"':''}><span aria-hidden="true">${icons[id]}</span><strong>${name}</strong></a>`).join('')}`;
   const win=document.createElement('section');
+  win.hidden=page==='home';
   win.className='desktop-window';win.id='portfolio-window';win.setAttribute('aria-label',title+' 창');
   win.innerHTML=`<div class="window-titlebar"><span class="window-app-icon" aria-hidden="true">${icons[page]||icons.home}</span><span class="window-title">${title}${current?' — eunda works':''}</span><div class="window-controls"><button data-window="minimize" aria-label="창 최소화">−</button><button data-window="maximize" aria-label="창 최대화" aria-pressed="false">□</button><button data-window="close" aria-label="창 닫기">×</button></div></div><div class="window-navigation"><a class="back-button" href="index.html" aria-label="홈으로">←</a><span class="address-label">Address</span><div class="address-field"><span aria-hidden="true">🌐</span> eunda.works / ${page==='home'?'my-universe':page}<span class="address-arrow">▾</span></div></div>`;
   win.append(content);
@@ -36,7 +37,14 @@
   document.getElementById('start-picks').addEventListener('click',()=>{setStart(false);showSaved();});
   const restore=document.getElementById('restore-window');
   const setWindow=open=>{win.hidden=!open;restore.classList.toggle('active',open);restore.setAttribute('aria-expanded',String(open));if(!open)restore.focus();};
+  restore.classList.toggle('active',!win.hidden);
+  restore.setAttribute('aria-expanded',String(!win.hidden));
   restore.addEventListener('click',()=>setWindow(win.hidden));
+  if(page==='home'){
+    app.querySelectorAll('a[href="index.html"]').forEach(link=>link.addEventListener('click',e=>{
+      e.preventDefault();setWindow(true);setStart(false);
+    }));
+  }
   win.querySelector('[data-window="minimize"]').addEventListener('click',()=>setWindow(false));
   win.querySelector('[data-window="close"]').addEventListener('click',()=>setWindow(false));
   win.querySelector('[data-window="maximize"]').addEventListener('click',e=>{const max=win.classList.toggle('maximized');e.currentTarget.setAttribute('aria-pressed',String(max));e.currentTarget.setAttribute('aria-label',max?'창 크기 복원':'창 최대화');});
