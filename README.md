@@ -1,6 +1,6 @@
 # eunda works
 
-한국경제 AI 교육 포트폴리오. 파우더블루, 로즈핑크, 아이보리, 브라운을 활용한 빈티지 스크랩북 콘셉트입니다. 작품을 골라 보는 컬렉션 탐색 방식을 유지합니다.
+A Korean AI portfolio presented as a retro desktop: blue wallpaper, silver application windows and an original space backdrop. Includes desktop shortcuts, a START menu, window controls and saved projects.
 
 전체 페이지에는 CookieRun 웹폰트 Regular(400), Bold(700), Black(900)을 적용했습니다.
 
@@ -31,3 +31,10 @@ Prompt: Vintage dreamy pastel editorial still life of floating pearlescent glass
 ## 검증
 
 HTML 진입점과 로컬 파일 경로, JavaScript 구문을 확인했습니다. 브라우저 시각 검증은 수행하지 않았습니다. WebMCP는 지원되는 환경에서만 활성화되며, 현재 환경에서 실제 등록/실행 검증은 하지 못했습니다.
+
+
+## Retro desktop update
+
+`dist/desktop.js` manages the desktop, window controls, START menu and clock. `dist/assets/retro-universe.png` is an original image_gen background with blue nebulae, silver orbital paths and four planets.
+
+Verified all five pages in Chrome at desktop and mobile widths, no horizontal overflow or JavaScript errors. Checked window minimize/restore/maximize, START menu, category filter, saved projects and detail dialogs.
