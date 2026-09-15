@@ -2,7 +2,7 @@
 
 A Korean AI portfolio presented as a retro desktop: blue wallpaper, silver application windows and an original space backdrop. Includes desktop shortcuts, a START menu, window controls and saved projects.
 
-전체 페이지에는 CookieRun 웹폰트 Regular(400), Bold(700), Black(900)을 적용했습니다.
+All pages use the Hamchorom (HCRDotum) webfont, regular weight 400, with font-display: swap.
 
 ## 페이지
 
