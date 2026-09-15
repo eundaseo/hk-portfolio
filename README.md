@@ -7,10 +7,10 @@ All pages use the Hamchorom (HCRDotum) webfont, regular weight 400, with font-di
 ## 페이지
 
 - `dist/index.html`: 홈, 컬렉션 안내
-- `dist/artcle.html`: 기사 (요청한 파일명 그대로)
+- `dist/article.html`: 기사 (요청한 파일명 그대로)
 - `dist/image.html`: 이미지 갤러리, 카테고리 필터
-- `dist/video.html`: 영상 기획안
-- `dist/final.html`: Final Project 소개
+- `dist/Live.html`: 영상 기획안
+- `dist/project.html`: Final Project 소개
 - `dist/style.css`: 공통 디자인과 반응형 스타일
 - `dist/app.js`: 임시 프로젝트 데이터, 페이지 구성, 상세 창, 관심 작품 저장
 
@@ -38,3 +38,5 @@ HTML 진입점과 로컬 파일 경로, JavaScript 구문을 확인했습니다.
 `dist/desktop.js` manages the desktop, window controls, START menu and clock. `dist/assets/retro-universe.png` is an original image_gen background with blue nebulae, silver orbital paths and four planets.
 
 Verified all five pages in Chrome at desktop and mobile widths, no horizontal overflow or JavaScript errors. Checked window minimize/restore/maximize, START menu, category filter, saved projects and detail dialogs.
+
+Navigation: Note (article.html), Live (Live.html), Project (project.html), Image (image.html). Legacy artcle.html, video.html and final.html redirect to the renamed pages. The desktop top bar has no brand title.

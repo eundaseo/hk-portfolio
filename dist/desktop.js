@@ -1,6 +1,6 @@
 /* Desktop presentation uses the existing portfolio data and actions. */
 (() => {
-  const icons = {home:'🪐',artcle:'📝',image:'🖼️',video:'📹',final:'💿'};
+  const icons = {home:'🪐',article:'📝',image:'🖼️',Live:'📹',project:'💿'};
   const current = routes.find(([id]) => id === page);
   const title = current ? current[1] : 'eunda works';
   const app = document.getElementById('app');
@@ -14,7 +14,7 @@
   app.querySelectorAll('.announcement,.header,.hero,.ticker,.collection,.intro-strip,.footer').forEach(el=>el.remove());
   const top = document.createElement('header');
   top.className='desktop-menubar';
-  top.innerHTML=`<a class="desktop-brand" href="index.html"><span aria-hidden="true">🪐</span> eunda works</a><nav aria-label="메인 메뉴">${routes.map(([id,name])=>`<a href="${id}.html" ${page===id?'aria-current="page"':''}>${name}</a>`).join('')}</nav><time id="desktop-clock"></time>`;
+  top.innerHTML=`<nav aria-label="메인 메뉴">${routes.map(([id,name])=>`<a href="${id}.html" ${page===id?'aria-current="page"':''}>${name}</a>`).join('')}</nav><time id="desktop-clock"></time>`;
   const shortcuts=document.createElement('nav');
   shortcuts.className='desktop-shortcuts'; shortcuts.setAttribute('aria-label','바탕화면 바로가기');
   shortcuts.innerHTML=`<a href="index.html"><span aria-hidden="true">🌐</span><strong>My universe</strong></a>${routes.map(([id,name])=>`<a href="${id}.html" ${page===id?'aria-current="page"':''}><span aria-hidden="true">${icons[id]}</span><strong>${name}</strong></a>`).join('')}`;
