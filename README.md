@@ -7,6 +7,7 @@ All pages use the Hamchorom (HCRDotum) webfont, regular weight 400, with font-di
 ## 페이지
 
 - `dist/index.html`: 홈, 컬렉션 안내
+- `dist/introduce.html`: 내폴더, 자기소개 프로필
 - `dist/article.html`: 기사 (요청한 파일명 그대로)
 - `dist/image.html`: 이미지 갤러리, 카테고리 필터
 - `dist/Live.html`: 영상 기획안

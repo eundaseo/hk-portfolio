@@ -1,6 +1,6 @@
 /* Desktop presentation uses the existing portfolio data and actions. */
 (() => {
-  const icons = {home:'🪐',article:'📝',image:'🖼️',Live:'📹',project:'💿'};
+  const icons = {home:'🪐',introduce:'📁',article:'📝',image:'🖼️',Live:'📹',project:'💿'};
   const current = routes.find(([id]) => id === page);
   const title = current ? current[1] : 'eunda works';
   const app = document.getElementById('app');
@@ -24,7 +24,7 @@
   win.innerHTML=`<div class="window-titlebar"><span class="window-app-icon" aria-hidden="true">${icons[page]||icons.home}</span><span class="window-title">${title}${current?' — eunda works':''}</span><div class="window-controls"><button data-window="minimize" aria-label="창 최소화"><svg class="window-control-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 11h10"/></svg></button><button data-window="maximize" aria-label="창 최대화" aria-pressed="false"><svg class="window-control-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 3h10v10H3z"/></svg></button><button data-window="close" aria-label="창 닫기"><svg class="window-control-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m3 3 10 10M13 3 3 13"/></svg></button></div></div><div class="window-navigation"><a class="back-button" href="index.html" aria-label="홈으로">←</a><span class="address-label">Address</span><div class="address-field"><span aria-hidden="true">🌐</span> eunda.works / ${page==='home'?'my-universe':page}<span class="address-arrow">▾</span></div></div>`;
   win.append(content);
   const status=document.createElement('div');status.className='window-status';
-  status.innerHTML=`<span>${page==='home'?'4 collections':items.filter(x=>x.type===page).length+' projects'} · ${title}</span><span>AI CREATIVE ARCHIVE</span><span class="status-grip" aria-hidden="true">◢</span>`;win.append(status);
+  status.innerHTML=`<span>${page==='home'?routes.length+' collections':page==='introduce'?'PROFILE FILE':items.filter(x=>x.type===page).length+' projects'} · ${title}</span><span>AI CREATIVE ARCHIVE</span><span class="status-grip" aria-hidden="true">◢</span>`;win.append(status);
   const taskbar=document.createElement('footer');taskbar.className='desktop-taskbar';
   taskbar.innerHTML=`<button class="start-button" id="start-button" aria-expanded="false" aria-controls="start-menu"><span aria-hidden="true">🪐</span> START</button><div class="task-divider"></div><button class="task-tab active" id="restore-window" aria-controls="portfolio-window" aria-expanded="true">${icons[page]||icons.home} <span>${title}</span></button><button class="task-tab" id="show-saved" aria-label="관심 작품 보기">♡ <span>My picks</span> <b id="saved-count">${saved.length}</b></button><span class="taskbar-note">a little curiosity, a new world.</span><span class="system-tray" aria-label="온라인 포트폴리오">◉ <span>eunda works © 2026</span></span>`;
   const start=document.createElement('nav');start.id='start-menu';start.className='start-menu';start.hidden=true;start.setAttribute('aria-label','시작 메뉴');
